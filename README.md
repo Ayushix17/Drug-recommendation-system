@@ -1,68 +1,132 @@
-# drug-recommendation-engine
+💊 AI-Powered Personalized Drug Recommendation Engine
+<p align="center"> <img src="assets/demo.gif" alt="Demo" width="700"/> </p> <p align="center"> <b>An explainable, risk-aware clinical AI system for safe medication recommendations</b> </p>
+<p align="center"> <img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python"/> <img src="https://img.shields.io/badge/FastAPI-Backend-green?logo=fastapi"/> <img src="https://img.shields.io/badge/Streamlit-Frontend-red?logo=streamlit"/> <img src="https://img.shields.io/badge/LLM-AI-purple"/> <img src="https://img.shields.io/badge/Graph-Knowledge--Graph-orange"/> <img src="https://img.shields.io/badge/Status-Active-success"/> <img src="https://img.shields.io/badge/License-MIT-yellow"/> </p>
+🧠 Overview
 
-Personalized Drug Recommendation Engine that suggests medications based on:
-- patient profile (`age`, `allergies`, `history`, `current medications`)
-- disease
-- drug-drug interactions
+This project simulates a real-world clinical decision support system that goes beyond basic ML predictions.
 
-It includes:
-- knowledge graph (`drugs + diseases + relations`)
-- risk scoring
-- alternative medicines for conflict cases
+It intelligently analyzes:
 
-## Repo Structure
-```text
+👤 Patient profile (age, allergies, history)
+🦠 Disease conditions
+💊 Drug interactions
+
+…and generates:
+
+✨ Safe, explainable, and personalized drug recommendations
+
+🚀 Features
+✨ Personalized Recommendations
+
+Tailored to individual patient profiles
+
+⚠️ Drug Interaction Detection
+
+Prevents unsafe medication combinations
+
+📊 Risk Scoring System
+
+Classifies recommendations into Low / Medium / High
+
+🔁 Alternative Drug Suggestions
+
+Suggests safer substitutes automatically
+
+🧠 Explainable AI (LLM-powered)
+
+Generates human-readable reasoning
+
+🕸️ Knowledge Graph Integration
+
+Models real drug–disease relationships
+
+🏗️ System Architecture
+<p align="center"> <img src="assets/architecture.png" width="700"/> </p>
+User → Frontend → FastAPI → (LLM + Graph + Risk Engine + Drug DB) → Output
+🖥️ Demo
+<p align="center"> <img src="assets/ui_input.png" width="400"/> <img src="assets/ui_output.png" width="400"/> </p>
+🔹 Sample Output
+Recommended Drug: Amlodipine
+Risk Level: Medium
+Alternatives: Losartan
+Explanation: Generated via LLM
+🕸️ Knowledge Graph
+<p align="center"> <img src="assets/graph.png" width="500"/> </p>
+
+Relationships Modeled:
+
+Drug → Treats → Disease
+Drug → Interacts With → Drug
+Drug → Causes → Side Effect
+
+⚙️ Tech Stack
+| Layer       | Technology              |
+| ----------- | ----------------------- |
+| 🧩 Backend  | FastAPI                 |
+| 🎨 Frontend | Streamlit               |
+| 🧠 AI Layer | LLM (GPT / Open-source) |
+| 🕸️ Graph   | NetworkX / Neo4j        |
+| 📊 Data     | OpenFDA / DrugBank      |
+| 🐍 Language | Python                  |
+
+📁 Project Structure
 drug-recommendation-engine/
+│
+├── backend/        # API & logic
+├── frontend/       # Streamlit UI
+├── ai/             # LLM + prompts
+├── graph/          # Knowledge graph
+├── data/           # datasets
+├── assets/         # images & GIFs
+├── notebooks/      # experiments
+│
 ├── README.md
 ├── requirements.txt
-├── .env.example
-├── data/
-│   ├── drugs.csv
-│   ├── diseases.csv
-│   ├── interactions.csv
-├── backend/
-│   ├── main.py
-│   ├── routes/recommend.py
-│   ├── services/recommender.py
-│   ├── services/risk_scoring.py
-│   ├── services/alternatives.py
-│   ├── graph/knowledge_graph.py
-│   └── models/schemas.py
-├── ai/
-│   ├── llm_engine.py
-│   └── prompts.py
-├── frontend/
-│   └── app.py
-└── notebooks/
-    └── data_exploration.ipynb
-```
+└── .env.example
 
-## Setup
-```bash
-python -m venv .venv
-.\.venv\Scripts\activate
+🔧 Installation
+
+# Clone repository
+git clone https://github.com/your-username/drug-recommendation-engine.git
+
+cd drug-recommendation-engine
+
+# Install dependencies
 pip install -r requirements.txt
-```
 
-## Run Backend (FastAPI)
-```bash
+# Run backend
 uvicorn backend.main:app --reload
-```
 
-Open:
-- API docs: `http://127.0.0.1:8000/docs`
-- Health: `http://127.0.0.1:8000/health`
-
-## Run Frontend (Streamlit)
-```bash
+# Run frontend
 streamlit run frontend/app.py
-```
 
-## Deploy UI Separately
-- Backend: deploy the FastAPI backend using Vercel with `vercel.json` and `api/index.py`.
-- UI: deploy the frontend dashboard separately on Streamlit Cloud using `frontend/app.py`.
-- On Streamlit Cloud, configure a secret named `api_base_url` with your backend URL, e.g. `https://your-api-url.vercel.app`.
+🔐 Environment Variables
+OPENAI_API_KEY=your_api_key_here
 
-## Notes
-- This project is decision-support oriented and should be reviewed by clinicians before real-world use.
-- AI module in `ai/` is scaffolding for future LLM-based explanation workflows.
+📈 Future Improvements
+
+🚀 Real-time EHR integration
+🧠 RL-based doctor feedback loop
+🌐 SaaS deployment for clinics
+📊 Better clinical validation
+
+🧠 Key Learnings
+AI systems > standalone ML models
+Knowledge graphs improve reasoning
+Explainability is critical in healthcare
+🤝 Contributing
+
+Pull requests are welcome!
+
+📜 License
+
+MIT License
+
+🌟 Support
+
+If you like this project, ⭐ the repo and share it!
+
+💼 Resume Highlight
+
+Built an AI-powered personalized drug recommendation system using FastAPI, knowledge graphs, and LLMs, enabling safe, explainable, and patient-specific treatment recommendations.
+
