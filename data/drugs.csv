@@ -1,0 +1,14 @@
+name,indications,contraindications,allergy_tags,side_effect_severity,alternatives
+lisinopril,hypertension|heart_failure,pregnancy,ace_inhibitor,2,losartan|amlodipine
+losartan,hypertension,pregnancy,arb,2,lisinopril|amlodipine
+amlodipine,hypertension|angina,severe_hypotension,calcium_channel_blocker,1,losartan|lisinopril
+metformin,type2_diabetes,severe_kidney_disease,biguanide,1,glipizide
+glipizide,type2_diabetes,type1_diabetes,sulfonylurea,2,metformin
+ibuprofen,pain|inflammation,peptic_ulcer_disease|kidney_disease,nsaid,2,acetaminophen
+aspirin,pain|cardiovascular_prevention,bleeding_disorder,nsaid,2,clopidogrel|acetaminophen
+clopidogrel,cardiovascular_prevention,active_bleeding,thienopyridine,2,aspirin
+acetaminophen,pain|fever,severe_liver_disease,analgesic,1,ibuprofen
+warfarin,anticoagulation,active_bleeding,vitamin_k_antagonist,3,apixaban
+apixaban,anticoagulation,active_bleeding,doac,2,warfarin
+amoxicillin,bacterial_infection,severe_penicillin_allergy,penicillin,1,azithromycin
+azithromycin,bacterial_infection,qt_prolongation,macrolide,2,amoxicillin

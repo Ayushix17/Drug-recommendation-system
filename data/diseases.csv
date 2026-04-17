@@ -1,0 +1,8 @@
+disease,drugs
+hypertension,lisinopril|losartan|amlodipine
+type2_diabetes,metformin|glipizide
+pain,ibuprofen|aspirin|acetaminophen
+cardiovascular_prevention,aspirin|clopidogrel
+anticoagulation,warfarin|apixaban
+bacterial_infection,amoxicillin|azithromycin
+heart_failure,lisinopril|losartan

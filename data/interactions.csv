@@ -1,0 +1,9 @@
+drug_a,drug_b,risk
+warfarin,ibuprofen,4
+warfarin,aspirin,4
+warfarin,amoxicillin,2
+apixaban,aspirin,4
+apixaban,ibuprofen,4
+lisinopril,ibuprofen,2
+losartan,ibuprofen,2
+azithromycin,warfarin,2
